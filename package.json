@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.17",
+    "@next/font": "^13.3.0",
     "@portabletext/react": "^2.0.2",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.0.0",

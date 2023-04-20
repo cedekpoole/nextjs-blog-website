@@ -1,4 +1,11 @@
 import '../globals.css'
+import Header from '../../components/Header'
+import { Montserrat } from '@next/font/google'
+
+const montserrat  = Montserrat({ 
+  subsets: ['latin'],
+  weight: ['400', '700']
+ })
 
 export const metadata = {
   title: 'CEDEKPOOLE BLOG',
@@ -11,8 +18,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={montserrat.className}>
+      <body>
+        <Header />
+        {children}
+        </body>
     </html>
   )
 }
