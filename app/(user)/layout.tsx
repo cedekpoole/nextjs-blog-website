@@ -1,6 +1,7 @@
 import '../globals.css'
-import Header from '../../components/Header'
+import Header from '@/components/Header'
 import { Montserrat } from '@next/font/google'
+import Banner from '@/components/Banner'
 
 const montserrat  = Montserrat({ 
   subsets: ['latin'],
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en" className={montserrat.className}>
       <body>
         <Header />
+        <Banner />
         {children}
         </body>
     </html>
