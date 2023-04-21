@@ -14,7 +14,7 @@ const Header = () => {
       <div>
         <Link
           href="https://cedekpoole.com"
-          className="hidden xs:block bg-gray-100 py-2 px-4 rounded-lg hover:text-gray-20 hover:bg-primary-100 transition duration-500 hover:translate-x-1 hover:shadow-2xl"
+          className="hidden xs:block bg-gray-100 py-2 px-4 rounded-lg hover:text-gray-20 hover:bg-gray-300 transition duration-500 hover:translate-x-1 hover:shadow-2xl"
         >
           Check out my portfolio
         </Link>
