@@ -14,9 +14,9 @@ type Props = {
 
 export const revalidate = 60; // revalidate the pages every 60 seconds
 
-export async function generateStaticParams() {
+export async function generateStaticParams({ params: { slug } }: Props) {
   const query = groq`
-    *[_type == "post" && slug.current == $slug][0]
+    *[_type == "post"]
     {
       slug
     }`;
