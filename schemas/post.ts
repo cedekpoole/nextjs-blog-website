@@ -9,6 +9,11 @@ const post = {
         type: 'string',
       },
       {
+        name: 'description',
+        title: 'Description',
+        type: 'string',
+      },
+      {
         name: 'coverImage',
         title: 'Cover image',
         type: 'image',
