@@ -4,6 +4,7 @@ import Image from "next/image";
 import { urlFor } from "@/lib/urlFor";
 import { MotionDiv } from "@/components/MotionDiv";
 import { PortableText } from "@portabletext/react";
+import { RichTextComponents } from "@/components/RichTextComponents";
 
 type Props = {
   params: {
@@ -20,9 +21,9 @@ const Post = async ({ params: { slug } }: Props) => {
   const post = await client.fetch(query, { slug });
 
   return (
-    <article className="w-5/6 mx-auto">
+    <article className="w-5/6 mx-auto pb-28">
       <hr className="mb-10 mt-3 border-gray-100" />
-      <section className="pb-28">
+      <section className="mb-10">
         <MotionDiv duration={0.8} x={-50} className="relative h-80">
           <Image
             className="object-cover object-center mx-auto opacity-30"
@@ -43,7 +44,7 @@ const Post = async ({ params: { slug } }: Props) => {
           </div>
         </MotionDiv>
       </section>
-      
+      <PortableText value={post.body} components={RichTextComponents}/>
     </article>
   );
 };

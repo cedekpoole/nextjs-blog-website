@@ -38,10 +38,30 @@ const post = {
         of: [
           {
             type: 'block',
+            marks: {
+              // Annotations can be any object structure – e.g. a link or a footnote.
+              annotations: [
+                {
+                  title: 'URL',
+                  name: 'link',
+                  type: 'object',
+                  fields: [
+                    {
+                      title: 'URL',
+                      name: 'href',
+                      type: 'url',
+                      validation: (Rule:any) => Rule.uri({
+                        scheme: ['http', 'https', 'mailto', 'tel']
+                      })
+                    }
+                  ]
+                }
+              ]
+            }
           },
           {
             type: 'image',
-          }
+          },
         ],
       },
     ],
