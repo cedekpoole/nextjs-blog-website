@@ -12,6 +12,22 @@ type Props = {
   };
 };
 
+export const revalidate = 60; // revalidate the pages every 60 seconds
+
+export async function generateStaticParams() {
+  const query = groq`
+    *[_type == "post" && slug.current == $slug][0]
+    {
+      slug
+    }`;
+
+  const slugs: Post[] = await client.fetch(query);
+  const slugRoutes = slugs.map((slug) => slug.slug.current)
+  return slugRoutes.map((slug) => ({
+    slug,
+  }))
+}
+
 const Post = async ({ params: { slug } }: Props) => {
   const query = groq`
     *[_type == "post" && slug.current == $slug][0]
@@ -44,7 +60,9 @@ const Post = async ({ params: { slug } }: Props) => {
           </div>
         </MotionDiv>
       </section>
-      <PortableText value={post.body} components={RichTextComponents}/>
+      <MotionDiv duration={0.5} x={20}>
+        <PortableText value={post.body} components={RichTextComponents}/>
+      </MotionDiv>
     </article>
   );
 };
