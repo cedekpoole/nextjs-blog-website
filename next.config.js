@@ -3,6 +3,9 @@ const nextConfig = {
   experimental: {
     appDir: true,
     forceSwcTransforms: true,
+  },
+  images: {
+    domains: ["cdn.sanity.io"],
   }
 };
 
