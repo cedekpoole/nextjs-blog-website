@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { urlFor } from "@/lib/urlFor";
+import ClientSideRoute from "./ClientSideRoute";
 type Props = {
   posts: Post[];
 };
@@ -12,7 +13,8 @@ const BlogList = ({ posts }: Props) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {/* BLOG POSTS */}
         {posts.map((post) => (
-          <div key={post._id} className="flex flex-col group cursor-pointer">
+          <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
+          <div className="mb-5 flex flex-col group cursor-pointer">
             <div className="relative group-hover:scale-105 transition duration-300 w-full h-80 drop-shadow-xl ">
               <Image
                 className="object-cover object-left lg:object-center"
@@ -37,6 +39,7 @@ const BlogList = ({ posts }: Props) => {
               <p className="text-gray-200">{post.description}</p>
             </div>
           </div>
+          </ClientSideRoute>
         ))}
       </div>
     </div>
