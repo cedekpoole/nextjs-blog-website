@@ -6,11 +6,13 @@ type Props = {
   x?: number;
   y?: number;
   duration: number;
+  className?: string;
 };
 
-export const MotionDiv = ({ children, x, y, duration }: Props) => {
+export const MotionDiv = ({ children, x, y, duration, className }: Props) => {
   return (
     <motion.div
+    className={className}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
