@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang="en" className={`${montserrat.className} bg-slate-100`}>
       <body>
         <Header />
         <Banner />
