@@ -28,13 +28,14 @@ export async function generateStaticParams() {
   }))
 }
 
-const Post = async ({ params: { slug } }: Props) => {
+async function Post({ params: { slug } }: Props) {
   const query = groq`
-    *[_type == "post" && slug.current == $slug][0]
+    *[_type == 'post' && slug.current == $slug][0]
     {
-      ...
-    }`;
-  const post = await client.fetch(query, { slug });
+      ...,
+    }
+    `;
+  const post: Post = await client.fetch(query, { slug });
 
   return (
     <article className="w-5/6 mx-auto pb-28">
