@@ -4,6 +4,8 @@
 
 ## Description
 
+Vist the website here: https://webdev-blog-cedekpoole.vercel.app/ 
+
 This is a weekly blog that will be updated every week with new programming content. This includes but is not limited to: new projects, new technologies, and new ideas for other potential projects. This will be used as means to keep up with my progress as a developer and to keep track of my ideas. 
 
 #### Technologies Used
@@ -23,13 +25,13 @@ N/A - This is a website that is hosted on Vercel.
 ## Usage
 
 #### How to use the website (Normal User)
-- Visit the website at: https://webdev-blog-eta.vercel.app/
+- Visit the website at: https://webdev-blog-cedekpoole.vercel.app/ 
 - Click on the blog post that you would like to read
 - Read the blog post
 - Check out links in the footer to see my other projects and social media 
 
 #### How to use the website (Admin User)
-- Visit the website at: https://webdev-blog-eta.vercel.app/studio
+- Visit the website at: https://webdev-blog-cedekpoole.vercel.app/studio
 - You will be prompted to login via your github account/email
 - Once logged in, you will be able to create new blog posts and edit existing ones
 - You can also add new members to the studio and give them access to the studio
