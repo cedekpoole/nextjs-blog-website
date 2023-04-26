@@ -12,6 +12,7 @@ interface Post extends Base {
     slug: Slug;
     title: string;
     description: string;
+    publishedAt: string;
 }
 
 interface Description {

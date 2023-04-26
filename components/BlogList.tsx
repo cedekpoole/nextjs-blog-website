@@ -25,7 +25,7 @@ const BlogList = ({ posts }: Props) => {
               <div className="absolute bottom-0 w-full backdrop-blur-sm bg-black bg-opacity-50 text-gray-20 py-5">
                 <p className="ml-2 text-lg">{post.title}</p>
                 <p className="ml-3 text-sm">
-                  {new Date(post._createdAt).toLocaleDateString("en-US", {
+                  {new Date(post.publishedAt).toLocaleDateString("en-US", {
                     day: "numeric",
                     month: "long",
                     year: "numeric",
