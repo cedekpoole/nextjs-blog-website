@@ -6,7 +6,7 @@ import BlogList from "@/components/BlogList";
 const query = groq`
   *[_type=="post"]{
     ...
-  } | order(_createdAt desc)`
+  } | order(publishedAt desc)`
 
 export const revalidate = 60; // revalidate the pages every 60 seconds
 
