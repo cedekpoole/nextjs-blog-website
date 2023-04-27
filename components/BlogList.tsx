@@ -10,7 +10,7 @@ const BlogList = ({ posts }: Props) => {
   return (
     <div className="w-5/6 mx-auto mb-20">
       <hr className="border-gray-100 mt-3 mb-10" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {/* BLOG POSTS */}
         {posts.map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
