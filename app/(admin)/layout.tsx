@@ -9,6 +9,12 @@ const montserrat  = Montserrat({
 export const metadata = {
   title: 'CEDEKPOOLE BLOG',
   description: 'A weekly blog about programming, web development, and more.',
+  icons: {
+    icon: {
+      url: "/favicon.svg",
+      type: "image/svg",
+    }
+  }
 }
 
 export default function RootLayout({
