@@ -43,7 +43,7 @@ async function Post({ params: { slug } }: Props) {
       <section className="mb-10">
         <MotionDiv duration={0.8} x={-50} className="relative h-80">
           <Image
-            className="object-cover object-center mx-auto opacity-30"
+            className="object-cover object-center mx-auto opacity-20"
             src={urlFor(post.coverImage).url()}
             alt={post.slug.current}
             fill
@@ -57,7 +57,7 @@ async function Post({ params: { slug } }: Props) {
                 year: "numeric",
               })}
             </p>
-            <p className="text-xs xs:text-sm ml-2">{post.description}</p>
+            <p className="text-xs xs:text-sm ml-2 font-bold">{post.description}</p>
           </div>
         </MotionDiv>
       </section>
