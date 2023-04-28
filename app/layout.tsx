@@ -8,7 +8,7 @@ const montserrat  = Montserrat({
 
 
 export const metadata = {
-  title: 'cedekpoole Weekly',
+  title: 'Cedekpoole Weekly',
   description: 'A weekly blog about programming, web development, and more.',
 }
 

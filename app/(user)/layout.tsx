@@ -4,7 +4,7 @@ import Banner from '@/components/Banner'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'cedekpoole Weekly',
+  title: 'Cedekpoole Weekly',
   description: 'A weekly blog about programming, web development, and more.',
   icons: {
     icon: {
