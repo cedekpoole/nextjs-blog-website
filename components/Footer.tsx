@@ -13,7 +13,7 @@ const Footer = () => {
           <h2 className="mb-3 text-lg font-bold">Links</h2>
           <p className="mb-3 text-xs">
             Feel free to check out{" "}
-            <Link href="https://cedekpoole.com" target="_blank" className="underline hover:font-bold">
+            <Link href="https://www.cedekpoole.com" target="_blank" className="underline hover:font-bold">
               my portfolio
             </Link>
           </p>
