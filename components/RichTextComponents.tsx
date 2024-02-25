@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { urlFor } from "@/lib/urlFor";
 
@@ -6,14 +5,14 @@ export const RichTextComponents = {
   types: {
     image: ({ value }: any) => {
       return (
-        <div className="relative w-full h-96 sm:m-10 sm:mx-auto">
-          <img
-            className="object-contain"
-            src={urlFor(value).url()}
-            alt="Blog Image"
-            
-          />
-        </div>
+        <div
+          className="relative w-full h-96 sm:m-10 sm:mx-auto bg-center bg-no-repeat bg-cover"
+          style={{
+            backgroundImage: `url(${urlFor(value).url()})`,
+            backgroundSize: "contain",
+          }}
+          aria-label="Blog Image"
+        ></div>
       );
     },
   },
@@ -40,7 +39,7 @@ export const RichTextComponents = {
     ),
     h5: ({ children }: any) => (
       <h5 className="text-xl font-bold py-2">{children}</h5>
-    )
+    ),
   },
   blockquote: ({ children }: any) => (
     <blockquote className="border-gray-100 border-l-4 pl-5 py-5 my-5">
