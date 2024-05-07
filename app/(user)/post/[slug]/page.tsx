@@ -22,10 +22,10 @@ export async function generateStaticParams({ params: { slug } }: Props) {
     }`;
 
   const slugs: Post[] = await client.fetch(query);
-  const slugRoutes = slugs.map((slug) => slug.slug.current)
+  const slugRoutes = slugs.map((slug) => slug.slug.current);
   return slugRoutes.map((slug) => ({
     slug,
-  }))
+  }));
 }
 
 async function Post({ params: { slug } }: Props) {
@@ -42,11 +42,10 @@ async function Post({ params: { slug } }: Props) {
       <hr className="mb-10 mt-3 border-gray-100" />
       <section className="mb-10">
         <MotionDiv duration={0.8} x={-50} className="relative h-80">
-          <Image
-            className="object-cover object-center mx-auto opacity-20"
+          <img
+            className="object-cover object-center mx-auto opacity-20 w-full h-full"
             src={urlFor(post.coverImage).url()}
             alt={post.slug.current}
-            fill
           />
           <div className="absolute bottom-0 p-5">
             <p className="font-bold text-4xl md:text-6xl mb-3">{post.title}</p>
@@ -57,15 +56,17 @@ async function Post({ params: { slug } }: Props) {
                 year: "numeric",
               })}
             </p>
-            <p className="text-xs xs:text-sm ml-2 font-bold">{post.description}</p>
+            <p className="text-xs xs:text-sm ml-2 font-bold">
+              {post.description}
+            </p>
           </div>
         </MotionDiv>
       </section>
       <MotionDiv duration={0.5} x={20}>
-        <PortableText value={post.body} components={RichTextComponents}/>
+        <PortableText value={post.body} components={RichTextComponents} />
       </MotionDiv>
     </article>
   );
-};
+}
 
 export default Post;

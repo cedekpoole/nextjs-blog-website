@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import LogoImg from '../assets/logo.svg'
 import { ArrowSmallLeftIcon } from '@heroicons/react/24/solid'
 
@@ -12,7 +11,7 @@ function StudioNavbar(props: any) {
                 <ArrowSmallLeftIcon className="w-6 h-6 mr-2" />
                 Go to website
             </Link>
-            <Image 
+            <img 
             className='mr-5'
             src={LogoImg}
             alt="Logo"

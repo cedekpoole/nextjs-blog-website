@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { urlFor } from "@/lib/urlFor";
 import ClientSideRoute from "./ClientSideRoute";
 type Props = {
@@ -16,11 +14,10 @@ const BlogList = ({ posts }: Props) => {
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
           <div className="mb-5 flex flex-col group cursor-pointer">
             <div className="relative group-hover:scale-105 transition duration-300 w-full h-80 drop-shadow-xl ">
-              <Image
-                className="object-cover object-left lg:object-center"
+              <img
+                className="object-cover object-left lg:object-center w-full h-full"
                 src={urlFor(post.coverImage).url()}
                 alt={post.slug.current}
-                fill
               />
               <div className="absolute bottom-0 w-full backdrop-blur-sm bg-black bg-opacity-50 text-gray-20 py-5">
                 <p className="ml-2 text-lg">{post.title}</p>
